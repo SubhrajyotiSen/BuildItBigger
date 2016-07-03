@@ -8,7 +8,6 @@ import android.test.ApplicationTestCase;
 
 import com.subhrajyoti.jokes.Jokes;
 
-import org.junit.Assert;
 import org.junit.Test;
 
 public class EndpointsAsyncTaskTest extends ApplicationTestCase<Application> {
@@ -19,7 +18,7 @@ public class EndpointsAsyncTaskTest extends ApplicationTestCase<Application> {
 
     @Test
     public void testonPostExecute(){
-        Assert.assertNotNull(new EndpointsAsyncTask().execute(new Pair<Context, String>(getContext(), (new Jokes()).getJoke())));
+        assertNotNull(new EndpointsAsyncTask().execute(new Pair<Context, String>(getContext(), (new Jokes()).getJoke())));
 
     }
 }
