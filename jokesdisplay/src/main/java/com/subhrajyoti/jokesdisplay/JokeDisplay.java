@@ -13,7 +13,7 @@ public class JokeDisplay extends AppCompatActivity {
         setContentView(R.layout.activity_joke_dsiplay);
 
         Intent intent = getIntent();
-        String joke = intent.getStringExtra("joke");
+        String joke = intent.getStringExtra("Joke");
         Toast.makeText(this, joke, Toast.LENGTH_LONG).show();
     }
 }

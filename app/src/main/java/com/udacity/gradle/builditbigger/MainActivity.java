@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import com.subhrajyoti.jokes.Jokes;
 import com.subhrajyoti.jokesdisplay.JokeDisplay;
@@ -47,7 +48,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void tellJoke(View view){
-        new EndpointsAsyncTask().execute(new Pair<Context, String>(this, "Manfred"));
+        Jokes jokes = new Jokes();
+        new EndpointsAsyncTask().execute(new Pair<Context, String>(this, jokes.getJoke()));
 
     }
 
