@@ -62,6 +62,6 @@ public class MainActivityFragment extends Fragment {
     }
 
     public void tellJoke(){
-        new EndpointsAsyncTask().execute(new Pair<Context, String>(getActivity().getApplicationContext(), (new Jokes()).getJoke()));
+        new EndpointsAsyncTask().execute(getActivity().getApplicationContext());
     }
 }

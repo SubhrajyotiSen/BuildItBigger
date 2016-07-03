@@ -18,7 +18,7 @@ public class EndpointsAsyncTaskTest extends ApplicationTestCase<Application> {
 
     @Test
     public void testonPostExecute(){
-        assertNotNull(new EndpointsAsyncTask().execute(new Pair<Context, String>(getContext(), (new Jokes()).getJoke())));
+        assertNotNull(new EndpointsAsyncTask().execute(getContext()));
 
     }
 }
