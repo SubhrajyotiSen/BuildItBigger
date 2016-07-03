@@ -10,6 +10,8 @@ import com.subhrajyoti.jokes.Jokes;
 
 import org.junit.Test;
 
+import java.util.concurrent.ExecutionException;
+
 public class EndpointsAsyncTaskTest extends ApplicationTestCase<Application> {
 
     public EndpointsAsyncTaskTest() {
@@ -17,8 +19,8 @@ public class EndpointsAsyncTaskTest extends ApplicationTestCase<Application> {
     }
 
     @Test
-    public void testonPostExecute(){
-        assertNotNull(new EndpointsAsyncTask().execute(getContext()));
+    public void testonPostExecute() throws ExecutionException, InterruptedException {
+        assertNotNull(new EndpointsAsyncTask().execute(getContext()).get());
 
     }
 }
