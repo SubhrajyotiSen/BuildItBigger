@@ -1,26 +1,25 @@
 package com.udacity.gradle.builditbigger;
 
 
-import android.app.Application;
 import android.content.Context;
-import android.support.v4.util.Pair;
-import android.test.ApplicationTestCase;
-
-import com.subhrajyoti.jokes.Jokes;
+import android.support.test.InstrumentationRegistry;
+import android.support.test.runner.AndroidJUnit4;
 
 import org.junit.Test;
+import org.junit.runner.RunWith;
 
 import java.util.concurrent.ExecutionException;
 
-public class EndpointsAsyncTaskTest extends ApplicationTestCase<Application> {
+import static org.junit.Assert.assertNotNull;
 
-    public EndpointsAsyncTaskTest() {
-        super(Application.class);
-    }
+@RunWith(AndroidJUnit4.class)
+public class EndpointsAsyncTaskTest {
 
     @Test
-    public void testonPostExecute() throws ExecutionException, InterruptedException {
-        assertNotNull(new EndpointsAsyncTask().execute(getContext()).get());
+    public void testOnPostExecute() throws ExecutionException, InterruptedException {
+        Context appContext = InstrumentationRegistry.getTargetContext();
+
+        assertNotNull(new EndpointsAsyncTask().execute(appContext).get());
 
     }
 }
