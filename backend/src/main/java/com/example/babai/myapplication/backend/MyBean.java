@@ -1,7 +1,7 @@
 package com.example.babai.myapplication.backend;
 
 /** The object model for the data we are sending through endpoints */
-public class MyBean {
+class MyBean {
 
     private String myData;
 
@@ -9,7 +9,7 @@ public class MyBean {
         return myData;
     }
 
-    public void setData(String data) {
+    void setData(String data) {
         myData = data;
     }
 }
