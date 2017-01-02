@@ -23,7 +23,7 @@ public class MainActivityFragment extends Fragment {
         jokeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new EndpointsAsyncTask().execute(getContext());
+                new EndpointsAsyncTask(getContext()).execute();
             }
         });
         return rootView;
